@@ -4,6 +4,8 @@ const morgan = require("morgan");
 const path = require("path");
 
 const app = express();
+// localhost:3000 = pathname/public
+app.use(express.static(path.join(__dirname, "public")));
 
 // http logger
 app.use(morgan("combined"));
